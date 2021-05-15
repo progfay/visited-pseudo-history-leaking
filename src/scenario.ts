@@ -1,7 +1,8 @@
 import path from "path";
 import type { BrowserContext } from "playwright";
 
-interface ScenarioResult {
+export interface ScenarioResult {
+  name: string;
   version: string;
   screenshotPath: string;
   visitedColor: string;
@@ -35,6 +36,7 @@ export async function runScenario(
   });
 
   const result: ScenarioResult = {
+    name,
     version: browserContext.browser()?.version() ?? "unknown",
     screenshotPath,
     visitedColor: await page.$eval(
