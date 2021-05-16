@@ -10,7 +10,7 @@ function resultToTableRow(result: ScenarioResult): string {
 }
 
 export function generateREADME(results: ScenarioResult[]): string {
-  return `# \`<a>\` Pseudo Silhouette Leak
+  return `# \`:visited\` pseudo History Leaking
 
 ## Description
 

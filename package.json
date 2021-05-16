@@ -1,5 +1,5 @@
 {
-  "name": "anchor-pseudo-silhouette-leak",
+  "name": "visited-pseudo-history-leaking",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/progfay/anchor-pseudo-silhouette-leak.git"
+    "url": "git+https://github.com/progfay/visited-pseudo-history-leaking.git"
   },
   "author": "progfay",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/progfay/anchor-pseudo-silhouette-leak/issues"
+    "url": "https://github.com/progfay/visited-pseudo-history-leaking/issues"
   },
-  "homepage": "https://github.com/progfay/anchor-pseudo-silhouette-leak#readme",
+  "homepage": "https://github.com/progfay/visited-pseudo-history-leaking#readme",
   "devDependencies": {
     "@tsconfig/node16": "1.0.1",
     "@types/core-js": "2.5.4",

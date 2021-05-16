@@ -1,4 +1,4 @@
-# `<a>` Pseudo Silhouette Leak
+# `:visited` pseudo History Leaking
 
 ## Description
 
