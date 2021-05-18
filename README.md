@@ -14,8 +14,10 @@ This repository was research result of implementation each browsers.
 
 ## Result
 
-| Browser (version)      | `color` of `:link` | `color` of `:visited` | Valid? |
-| :--------------------- | :----------------: | :-------------------: | :----: |
-| chromium (92.0.4498.0) |  `rgb(0, 128, 0)`  |   `rgb(0, 128, 0)`    |   ⭕   |
-| firefox (89.0b6)       |  `rgb(0, 128, 0)`  |   `rgb(0, 128, 0)`    |   ⭕   |
-| webkit (14.2)          |  `rgb(0, 128, 0)`  |   `rgb(0, 128, 0)`    |   ⭕   |
+Generated Date: Tue, 18 May 2021 14:45:53 GMT
+
+| Browser  | `color` of `:link` | `color` of `:visited` | Valid? |
+| :------- | :----------------: | :-------------------: | :----: |
+| chromium |  `rgb(0, 128, 0)`  |   `rgb(0, 128, 0)`    |   ⭕   |
+| firefox  |  `rgb(0, 128, 0)`  |   `rgb(0, 128, 0)`    |   ⭕   |
+| webkit   |  `rgb(0, 128, 0)`  |   `rgb(0, 128, 0)`    |   ⭕   |

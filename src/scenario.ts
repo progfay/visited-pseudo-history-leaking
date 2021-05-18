@@ -3,7 +3,6 @@ import type { BrowserContext } from "playwright";
 
 export interface ScenarioResult {
   name: string;
-  version: string;
   screenshotPath: string;
   visitedColor: string;
   notVisitedColor: string;
@@ -16,10 +15,11 @@ export async function runScenario(
 ): Promise<ScenarioResult> {
   const page = await browserContext.newPage();
 
-  await page.goto(url, { waitUntil: "load" });
+  await page.goto(url);
+  const navigation = page.waitForNavigation();
   await page.click(`a#visited`);
-  await page.waitForLoadState("load");
-  await page.goBack({ waitUntil: "load" });
+  await navigation;
+  await page.goBack();
 
   const screenshotPath = path.join(
     "./screenshots",
@@ -37,7 +37,6 @@ export async function runScenario(
 
   const result: ScenarioResult = {
     name,
-    version: browserContext.browser()?.version() ?? "unknown",
     screenshotPath,
     visitedColor: await page.$eval(
       `a#visited`,

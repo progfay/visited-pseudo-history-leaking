@@ -1,4 +1,5 @@
-import { writeFile } from "fs/promises";
+import { mkdtemp, writeFile } from "fs/promises";
+import os from "os";
 import path from "path";
 import { chromium, firefox, webkit } from "playwright";
 import { generateREADME } from "./generateREADME";
@@ -12,10 +13,11 @@ async function main(): Promise<void> {
 
   const results = await Promise.all(
     [chromium, firefox, webkit].map(async (browserType) => {
-      const browser = await browserType.launch();
+      const tempDir = await mkdtemp(`${os.tmpdir()}${path.sep}`);
+      const context = await browserType.launchPersistentContext(tempDir);
       return await runScenario(
         browserType.name(),
-        await browser.newContext(),
+        context,
         `http://localhost:${PORT}`
       );
     })

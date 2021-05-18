@@ -6,6 +6,7 @@
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "tsc -p ./tsconfig.json",
+    "prestart": "rm -rf capture/*.png",
     "start": "node ./dist/index.js",
     "lint": "run-p lint:*",
     "lint:tsc": "tsc --noEmit -p ./tsconfig.json",

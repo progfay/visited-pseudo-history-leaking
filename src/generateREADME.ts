@@ -2,7 +2,7 @@ import type { ScenarioResult } from "./scenario";
 
 function resultToTableRow(result: ScenarioResult): string {
   return `| ${[
-    `${result.name} (${result.version})`,
+    `${result.name}`,
     `\`${result.notVisitedColor}\``,
     `\`${result.visitedColor}\``,
     result.notVisitedColor === result.visitedColor ? "⭕" : "❌",
@@ -26,8 +26,10 @@ This repository was research result of implementation each browsers.
 
 ## Result
 
-| Browser (version) | \`color\` of \`:link\` | \`color\` of \`:visited\` | Valid? |
-| :--- | :---: | :---: | :---: |
+Generated Date: ${new Date().toUTCString()}
+
+| Browser | \`color\` of \`:link\` | \`color\` of \`:visited\` | Valid? |
+| :------ | :--------------------: | :-----------------------: | :----: |
 ${results.map(resultToTableRow).join("\n")}
 `;
 }
